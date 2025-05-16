@@ -63,3 +63,22 @@
 
 **program3a string ex1**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/3a_string1.png)
 
+**program3a string ex2**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/3a_string2.png)
+
+**program3a string ex3**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/3a_string3.png)
+
+**program3a string ex4**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/3a_string4.png)
+
+**program3a string ex5**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/3a_string5.png)
+
+**program3a string ex6**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/3a_string6.png)
+
+**program3a string ex7**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/3a_string7.png)
+
+**program3a string ex8**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/3a_string8.png)
+
+**program3a string ex9**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/3a_string9.png)
+
+**program3a string ex10**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/3a_string10.png)
+
+

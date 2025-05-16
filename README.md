@@ -26,4 +26,33 @@
 **program 2**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/program2.png
 # program2 workedout exercise
 # hashmap 
+
 **program2 hashmap ex1**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/2_hashmap1.png)
+
+**program2 hashmap ex2**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/2_hashmap2.png)
+
+**program2 hashmap ex3**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/2_hashmap3.png)
+
+**program2 hashmap ex4**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/2_hashmap4.png)
+
+# treemap
+
+**program2 treemap ex1**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/2_treemap1.png)
+
+**program2 treemap ex2**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/2_treemap2.png)
+
+**program2 treemap ex3**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/2_treemap3.png)
+
+**program2 treemap ex4**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/2_treemap4.png)
+
+# linkedhashmap
+
+**program2 linkedhashmap ex1**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/2_linkedhashmap1.png)
+
+**program2 linkedhashmap ex2**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/2_linkedhashmap2.png)
+
+**program2 linkedhashmap ex3**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/2_linkedhashmap3.png)
+
+**program2 linkedhashmap ex4**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/2_linkedhashmap4.png)
+
+

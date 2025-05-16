@@ -55,4 +55,11 @@
 
 **program2 linkedhashmap ex4**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/2_linkedhashmap4.png)
 
+# program3a-string handling
+
+**program 3a**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/3a_string.png)
+
+# program3a worked out example
+
+**program3a string ex1**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/3a_string1.png)
 

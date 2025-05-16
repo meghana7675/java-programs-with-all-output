@@ -81,4 +81,29 @@
 
 **program3a string ex10**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/3a_string10.png)
 
+# program3b-string buffer and builder
+
+**program 3b**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/3b_string.png)
+
+# program3b worked out example
+
+**program3b string ex1**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/3a_string1.png)
+
+**program3b string ex2**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/3a_string2.png)
+
+**program3b Joining Strings ex1**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/3a_string3.png)
+
+**program3b Joining Strings ex2**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/3a_string4.png)
+
+**program3b Additional String Methods ex1**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/3a_string5.png)
+
+**program3b Additional String Methods ex2**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/3a_string6.png)
+
+**program3b StringBuffer ex1**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/3a_string7.png)
+
+**program3b StringBuffer ex2**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/3a_string8.png)
+
+**program3b StringBuilder ex1**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/3a_string9.png)
+
+**program3b StringBuilder ex2**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/3a_string10.png)
 

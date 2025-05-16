@@ -1,0 +1,341 @@
+//1. Question: Given a string, write a method to determine if it is a palindrome (reads the same forward and backward), ignoring case and non-alphanumeric characters. Input: "A man, a plan,
+//a canal: Panama" Output: true Input: "race a car" Output: false
+public class PalindromeChecker {
+
+    // Method to check if a string is a palindrome ignoring case and non-alphanumeric chars
+    public static boolean isPalindrome(String s) {
+        if (s == null) {
+            return false;
+        }
+
+        // Remove all non-alphanumeric characters and convert to lowercase
+        String cleaned = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+
+        int left = 0;
+        int right = cleaned.length() - 1;
+
+        // Check characters from both ends
+        while (left < right) {
+            if (cleaned.charAt(left) != cleaned.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+
+        return true;
+    }
+
+    public static void main(String[] args) {
+        String input1 = "A man, a plan, a canal: Panama";
+        String input2 = "race a car";
+
+        System.out.println(isPalindrome(input1)); // Output: true
+        System.out.println(isPalindrome(input2)); // Output: false
+    }
+}
+
+//2. Question: Implement a method that counts the number of vowels (a, e, i, o, u) in a given string case-insensitive. Input: "Hello World" Output: 3 Input: "Programming Interview"
+//Output: 6
+public class VowelCounter {
+
+    // Method to count vowels in a string (case-insensitive)
+    public static int countVowels(String str) {
+        if (str == null) {
+            return 0;
+        }
+
+        int count = 0;
+        String vowels = "aeiou";
+        String lowerStr = str.toLowerCase();
+
+        for (int i = 0; i < lowerStr.length(); i++) {
+            char ch = lowerStr.charAt(i);
+            if (vowels.indexOf(ch) != -1) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+    public static void main(String[] args) {
+        String input1 = "Hello World";
+        String input2 = "Programming Interview";
+
+        System.out.println(countVowels(input1)); // Output: 3
+        System.out.println(countVowels(input2)); // Output: 6
+    }
+}
+//joining string
+//1. Question: Write a method that joins an array of strings with a specified delimiter, without usingbuilt-in join methods. Input: ["apple", "banana", "cherry"], delimiter: ", "
+//Output: "apple, banana, cherry" Input: ["Java", "is", "fun"], delimiter: "-"Output: "Java-is-fun"
+public class StringJoiner {
+
+    // Method to join array of strings with delimiter
+    public static String joinStrings(String[] arr, String delimiter) {
+        if (arr == null || arr.length == 0) {
+            return "";
+        }
+
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < arr.length; i++) {
+            result.append(arr[i]);
+            // Append delimiter except after last element
+            if (i < arr.length - 1) {
+                result.append(delimiter);
+            }
+        }
+
+        return result.toString();
+    }
+
+    public static void main(String[] args) {
+        String[] input1 = {"apple", "banana", "cherry"};
+        String[] input2 = {"Java", "is", "fun"};
+
+        System.out.println(joinStrings(input1, ", ")); // Output: apple, banana, cherry
+        System.out.println(joinStrings(input2, "-"));  // Output: Java-is-fun
+    }
+}
+
+//2. Question: Implement a method that concatenates alternating characters from two input strings.
+If one string is longer than the other, append the remaining characters. Input: "abc", "123"
+Output: "a1b2c3" Input: "hello", "world!"
+Output: "hweolrllod!"
+public class AlternatingConcat {
+
+    // Method to concatenate alternating characters from two strings
+    public static String alternateConcat(String str1, String str2) {
+        if (str1 == null) str1 = "";
+        if (str2 == null) str2 = "";
+
+        StringBuilder result = new StringBuilder();
+        int i = 0, j = 0;
+
+        // Alternate characters until one string ends
+        while (i < str1.length() && j < str2.length()) {
+            result.append(str1.charAt(i++));
+            result.append(str2.charAt(j++));
+        }
+
+        // Append remaining characters from str1, if any
+        while (i < str1.length()) {
+            result.append(str1.charAt(i++));
+        }
+
+        // Append remaining characters from str2, if any
+        while (j < str2.length()) {
+            result.append(str2.charAt(j++));
+        }
+
+        return result.toString();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(alternateConcat("abc", "123"));     // Output: a1b2c3
+        System.out.println(alternateConcat("hello", "world!")); // Output: hweolrllod!
+    }
+}
+
+//Additional String Methods
+//1. Question: Create a method that finds the longest substring without repeating characters in a given string. Input: "abcabcbb"
+//Output: "abc" (or "cab" or "abc" - any substring of length 3 without repeating characters) Input: "bbbbb" Output: "b" Input: "pwwkew" Output: "wke" (or "kew")
+import java.util.HashMap;
+
+public class LongestUniqueSubstring {
+
+    // Method to find longest substring without repeating characters
+    public static String longestUniqueSubstring(String s) {
+        if (s == null || s.isEmpty()) {
+            return "";
+        }
+
+        HashMap<Character, Integer> charIndexMap = new HashMap<>();
+        int start = 0;  // Start index of current window
+        int maxLength = 0;
+        int maxStart = 0;  // Start index of max substring
+
+        for (int end = 0; end < s.length(); end++) {
+            char currentChar = s.charAt(end);
+
+            // If currentChar already seen, move start if needed
+            if (charIndexMap.containsKey(currentChar)) {
+                start = Math.max(start, charIndexMap.get(currentChar) + 1);
+            }
+
+            charIndexMap.put(currentChar, end);
+
+            // Update max length and start index
+            if (end - start + 1 > maxLength) {
+                maxLength = end - start + 1;
+                maxStart = start;
+            }
+        }
+
+        return s.substring(maxStart, maxStart + maxLength);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(longestUniqueSubstring("abcabcbb")); // Output: "abc" (or "bca", "cab")
+        System.out.println(longestUniqueSubstring("bbbbb"));    // Output: "b"
+        System.out.println(longestUniqueSubstring("pwwkew"));   // Output: "wke" (or "kew")
+    }
+}
+
+//2. Question: Write a method that takes a string and returns the first non-repeated character. If all characters are repeated, return null. Input: "swiss"
+//Output: "w" Input: "aabb" Output: null
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class FirstNonRepeatedChar {
+
+    // Method to find first non-repeated character
+    public static Character firstNonRepeatedChar(String str) {
+        if (str == null || str.isEmpty()) {
+            return null;
+        }
+
+        // LinkedHashMap to maintain insertion order
+        Map<Character, Integer> charCountMap = new LinkedHashMap<>();
+
+        // Count occurrences of each character
+        for (char ch : str.toCharArray()) {
+            charCountMap.put(ch, charCountMap.getOrDefault(ch, 0) + 1);
+        }
+
+        // Find first character with count 1
+        for (Map.Entry<Character, Integer> entry : charCountMap.entrySet()) {
+            if (entry.getValue() == 1) {
+                return entry.getKey();
+            }
+        }
+
+        return null; // All characters repeated
+    }
+
+    public static void main(String[] args) {
+        System.out.println(firstNonRepeatedChar("swiss")); // Output: w
+        System.out.println(firstNonRepeatedChar("aabb"));  // Output: null
+    }
+}
+
+//StringBuffer
+//1. Question: Implement a method using StringBuffer to reverse every word in a sentence while maintaining the word order. Input: "Java programming is fun"
+//Output: "avaJ gnimmargorp si nuf" Input: "Hello World" Output: "olleH dlroW"
+public class ReverseWords {
+
+    // Method to reverse every word using StringBuffer
+    public static String reverseWords(String sentence) {
+        if (sentence == null || sentence.isEmpty()) {
+            return sentence;
+        }
+
+        String[] words = sentence.split("\\s+");  // Split sentence into words
+        StringBuilder result = new StringBuilder();
+
+        for (String word : words) {
+            StringBuffer sb = new StringBuffer(word);
+            result.append(sb.reverse().toString()).append(" ");
+        }
+
+        return result.toString().trim();  // Remove trailing space
+    }
+
+    public static void main(String[] args) {
+        System.out.println(reverseWords("Java programming is fun")); // Output: avaJ gnimmargorp si nuf
+        System.out.println(reverseWords("Hello World"));              // Output: olleH dlroW
+    }
+}
+
+//2. Question: Write a method using StringBuffer to efficiently remove all occurrences of a given character from a string. Input: "programming", character: 'm'
+//Output: "prograing" Input: "banana", character: 'a' Output: "bnn"
+public class RemoveCharacter {
+
+    // Method to remove all occurrences of a given character using StringBuffer
+    public static String removeChar(String str, char ch) {
+        if (str == null) {
+            return null;
+        }
+
+        StringBuffer sb = new StringBuffer();
+
+        // Append characters except the given one
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) != ch) {
+                sb.append(str.charAt(i));
+            }
+        }
+
+        return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(removeChar("programming", 'm')); // Output: prograing
+        System.out.println(removeChar("banana", 'a'));      // Output: bnn
+    }
+}
+
+//StringBuilder
+1. Question: Implement a method using StringBuilder to efficiently generate all possible substrings of a given string. Input: "abc"
+//Output: ["a", "ab", "abc", "b", "bc", "c"] Input: "xy" Output: ["x", "xy", "y"]
+import java.util.ArrayList;
+import java.util.List;
+
+public class SubstringGenerator {
+
+    // Method to generate all substrings using StringBuilder
+    public static List<String> generateSubstrings(String str) {
+        List<String> substrings = new ArrayList<>();
+
+        if (str == null || str.isEmpty()) {
+            return substrings; // Return empty list
+        }
+
+        for (int i = 0; i < str.length(); i++) {
+            StringBuilder sb = new StringBuilder();
+            for (int j = i; j < str.length(); j++) {
+                sb.append(str.charAt(j));
+                substrings.add(sb.toString());
+            }
+        }
+
+        return substrings;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(generateSubstrings("abc")); // Output: [a, ab, abc, b, bc, c]
+        System.out.println(generateSubstrings("xy"));  // Output: [x, xy, y]
+    }
+}
+
+//2. Question: Create a method using StringBuilder to insert a space after every n characters in a string, except at the end. Input: "ABCDEFGHIJKLMNOPQR", n=4
+//Output: "ABCD EFGH IJKL MNOP QR" Input: "programming", n=3 Output: "pro gra mmi ng"
+public class InsertSpaces {
+
+    // Method to insert a space after every n characters using StringBuilder
+    public static String insertSpaces(String str, int n) {
+        if (str == null || n <= 0) {
+            return str;
+        }
+
+        StringBuilder sb = new StringBuilder();
+        
+        for (int i = 0; i < str.length(); i++) {
+            sb.append(str.charAt(i));
+
+            // Insert space after every n characters, unless at the end
+            if ((i + 1) % n == 0 && i != str.length() - 1) {
+                sb.append(' ');
+            }
+        }
+
+        return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(insertSpaces("ABCDEFGHIJKLMNOPQR", 4)); // Output: ABCD EFGH IJKL MNOP QR
+        System.out.println(insertSpaces("programming", 3));        // Output: pro gra mmi ng
+    }
+}

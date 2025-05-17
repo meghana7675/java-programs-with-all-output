@@ -125,6 +125,12 @@
 
 **program 5d swing_tabbed_pan**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/5d_swing.png)
 
+# program 6-Servlet program 
+
+**program 6a factorial**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/6a.png)
+
+**program 6c prime**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/6c.png)
+
 # program 7-JSP program 
 
 **program 7a session_managment**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/7a_session.png)

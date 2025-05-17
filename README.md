@@ -125,4 +125,19 @@
 
 **program 5d swing_tabbed_pan**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/5d_swing.png)
 
+# program 7-JSP program 
+
+**program 7a session_managment**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/7a_session.png)
+
+**program 7a session_managment**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/7a_session1.png)
+
+**program 7b cookie_managment**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/7b_session.png)
+
+**program 7b cookie_managment**-(https://github.com/meghana7675/java-programs-with-all-output/blob/main/7b_session1.png)
+
+
+
+
+
+
 
